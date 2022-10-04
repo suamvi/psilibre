@@ -1,14 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: sans-serif;
+:root{
+    --primary: rgb(139, 253, 145);
+    --secondary: rgb(109, 199, 114);
+    --light: rgb(205, 248, 207);
+    --accent: rgb(62, 122, 65);
 }
 
-.contenedor{
+body {
+    font-family: 'open sans';
+}
+
+.contenedor {
     padding: 60px 0;
     width: 90%;
     max-width: 1000px;
@@ -16,24 +23,24 @@ body{
     overflow: hidden;
 }
 
-.titulo{
-    color: rgb(118, 236, 148);
+.titulo {
+    color: var(--accent);
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
 }
 
-/*header*/
+/* Header */
 
-header{
+header {
     width: 100%;
-    height: 700px;
-    background: #0cebeb8a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #29ffc650, #20e3b254, #0cebeb6b), url(../img/logo.jpg);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eaf8f434, #e1f0ec2c, #dbf1f13a), url(../img/logo.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
+    height: 600px;
+    background: #7dec79a9;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(113, 88%, 77%, 0.315), hsla(162, 72%, 65%, 0.363)), url(../img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(113, 88%, 77%, 0.315), hsla(162, 72%, 65%, 0.363)), url(../img/portada.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -45,10 +52,10 @@ nav{
 }
 
 nav > a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-weight: 600;
     text-decoration: none;
-    margin-right: 50px;
+    margin-right: 10px;
 }
 
 nav > a:hover{
@@ -58,26 +65,22 @@ nav > a:hover{
 header .textos-header{
     display: flex;
     height: 430px;
-    width: 100%;
+    width: 40%;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     flex-direction: column;
     text-align: center;
 }
 
 .textos-header h1{
-    width: 100%;
-    height: 10%;
     font-size: 50px;
-    color: rgb(10, 51, 19);
-    padding: 20%; /*agregado*/
+    color:var(--light);
 }
 
 .textos-header h2{
     font-size: 30px;
     font-weight: 300;
-    color: rgb(3, 15, 5);
-    padding: auto; /*agregado*/
+    color: var(--light);
 }
 
 .wave{
@@ -86,8 +89,11 @@ header .textos-header{
     width: 100%;
 }
 
-/* about us*/
+/* About us */
 
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
 .contenedor-sobre-nosotros{
     display: flex;
     justify-content: space-evenly;
@@ -106,28 +112,33 @@ header .textos-header{
 }
 
 .contenido-textos h3 span{
-    background: #ffffff;
-    color: #fff;
+    background: var(--accent);
+    color: var(--light);
     border-radius: 50%;
     display: inline-block;
     text-align: center;
     width: 30px;
     height: 30px;
     padding: 2px;
-    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
     margin-right: 5px;
 }
 
-.contenidos-textos p{
+.contenido-textos p{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
 }
 
-/*galeria*/
+/* Galeria */
+
 
 .portafolio{
-    background: #ffffff;
+    background: #fff;
+}
+
+.portafolio:hover{
+    transform: scale(1);
 }
 
 .galeria-port{
@@ -142,7 +153,7 @@ header .textos-header{
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
 
 .imagen-port > img{
@@ -152,15 +163,15 @@ header .textos-header{
     display: block;
 }
 
-
 .hover-galeria{
     position: absolute;
-    width: 150%;
+    width: 100%;
     height: 100%;
     top: 0;
     transform: scale(0);
-    background: rgba(145, 236, 168, 0.534);
+    background: var(--light);
     transition: transform .5s;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -170,16 +181,15 @@ header .textos-header{
     width: 50px;
 }
 
-
 .hover-galeria p{
     color: #fff;
 }
 
-.imagen-port:hover .hover-galeria{ 
-    transform: scale(1);
+.imagen-port:hover .hover-galeria{
+    transform: scale(1.3);
 }
 
-/*clientes*/
+/* Clients */
 
 .cards{
     display: flex;
@@ -187,14 +197,14 @@ header .textos-header{
 }
 
 .cards .card{
-    background: rgba(143, 241, 143, 0.774);
+    background: var(--secondary);
     display: flex;
-    width: 50%;
+    width: 46%;
     height: 200px;
     align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .6);
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
 }
 
 .cards .card img{
@@ -206,35 +216,36 @@ header .textos-header{
     display: block;
 }
 
-.cards .card > .contenidos-texto-card{
+.cards .card > .contenido-texto-card{
     width: 60%;
     color: #fff;
 }
 
-.cards .card >.contenidos-texto-card p{
+.cards .card > .contenido-texto-card p{
     font-weight: 300;
     padding-top: 5px;
 }
 
-/*our team*/
+/*  Our team */
 
-.about-service{
+.about-services{
     background: #f2f2f2;
     padding-bottom: 30px;
 }
 
+
 .servicio-cont{
-    display: flex;
+    display:flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .servicio-ind{
-    width: 20%;
+    width: 28%;
     text-align: center;
 }
 
-.servicio-ind{
+.servicio-ind img{
     width: 90%;
 }
 
@@ -247,11 +258,12 @@ header .textos-header{
     text-align: justify;
 }
 
-/*footer*/
+/* footer */
 
 footer{
-    background: #414141;
+    background: #2b5a25;
     padding: 60px 0 30px 0;
+    margin: auto;
     overflow: hidden;
 }
 
@@ -264,33 +276,26 @@ footer{
     border-bottom: 1px solid #ccc;
 }
 
-.contenedor-footer.list{
-    width: 4px;
-    text-align: right;
-    padding: 30px 50px 0 0;
-   
-}
-
 .content-foo{
     text-align: center;
 }
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid #91fa83;
+    border-bottom: 3px solid var(--primary);
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
 
 .content-foo p{
-    color: rgb(170, 168, 168);
+    color: #ccc;
 }
 
 .titulo-final{
     text-align: center;
     font-size: 24px;
     margin: 20px 0 0 0;
-    color: #858181;
+    color: #9e9797;
 }
 
 @media screen and (max-width:900px){
@@ -312,10 +317,13 @@ footer{
         width: 90%;
     }
 
-    /*galeria*/
+    /* Galeria */
+
     .imagen-port{
         width: 44%;
     }
+
+    /* Clientes */
 
     .cards{
         flex-direction: column;
@@ -331,6 +339,8 @@ footer{
         margin-bottom: 30px;
     }
 
+    /* servicios */
+
     .servicio-cont{
         justify-content: center;
         flex-direction: column;
@@ -338,6 +348,90 @@ footer{
 
     .servicio-ind{
         width: 100%;
-        text-align: center ;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* Galeria */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* Clients */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
     }
 }
