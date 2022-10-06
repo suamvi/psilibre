@@ -66,9 +66,9 @@ header {
     height: 600px;
     background: #7dec79a9;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(113, 88%, 77%, 0.315), hsla(162, 72%, 65%, 0.363)), url(../img/portada.jpg);
+    background: -webkit-linear-gradient(to right, hsla(113, 88%, 77%, 0.315), hsla(162, 72%, 65%, 0.363)), url(../img/portada.png);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(113, 88%, 77%, 0.315), hsla(162, 72%, 65%, 0.363)), url(../img/portada.jpg);
+    background: linear-gradient(to right, hsla(113, 88%, 77%, 0.315), hsla(162, 72%, 65%, 0.363)), url(../img/portada.png);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
