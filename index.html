@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/mariposaverde.png" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+    crossorigin="anonymous">
 </head>
 
 <body class="hidden">
@@ -20,7 +20,27 @@
         <nav id="nav" class="nav1">
             <div class="contenedor-nav">
                 <div class="logo">
-                    <img src="img/mariposaverde.png" alt="">
+                    <!-- vuelo html inicio -->
+                    <style>
+                        .vuelo{
+                            height: 65px;
+                            width: calc(2100px / 30);
+                            background: url(./img/vuelomariposa.png);
+                            margin: 0 auto;
+                            animation: volar 1s steps(30) infinite;
+                            border-radius: 50%;
+                            }
+                        @keyframes volar{
+                            from {
+                            background-position: 0;
+                            }
+                            to{
+                            background-position: -2100px;
+                            }
+                        }
+                    </style>
+                    <!-- vuelo html fin -->
+                    <div class="vuelo"></div>
                 </div>
                 <div class="enlaces" id="enlaces">
                     <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
@@ -37,13 +57,13 @@
         <div class="textos">
             <h1>Psilibre</h1>
             <h2>Libera tu mente</h2>
-            <h3>Lic. Patry Moises</h3>
+            <h2>Lic. Patry Moises</h2>
         </div>
     </header>
     <main>
         <section class="team contenedor" id="equipo">
-            <h3>Nuestro equipo</h3>
-            <p class="after">Conoce a la gente asombrosa y creativa</p>
+            <h3>Mi forma de trabajo</h3>
+            <p class="after">Brindar las herramientas que necesites</p>
             <div class="card">
                 <div class="content-card">
                     <div class="people">
@@ -184,6 +204,21 @@
             </div>
         </section>
     </main>
+    
+    <!-- inico boton whatsapp -->
+    
+    <div class="container__boton">                
+        <ul class="menu__boton">
+        <a href="http://wa.me/5491176073009?text=Hola%20te%20contacto%20desde%20la%20web%20y%20quiero%20consultar%20lo%20siguiente:">
+            <img class="botonwp" src="img/whatsapp.svg" alt="">
+        </a>
+    </ul>
+</div>
+
+    <!-- fin boton whatsapp -->
+    
+    
+    <!-- footer inicio -->
     <footer id="contacto">
         <div class="footer contenedor">
             <div class="marca-logo">
@@ -191,17 +226,18 @@
             </div>
             <div class="iconos">
                 <!-- <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-youtube"></i> -->
-                <a href="" target="_blank"><img src="img/instagram.png" alt=""></a>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-youtube"></i> -->
+                    <a href="" target="_blank"><img src="img/instagram.png" alt=""></a>
                 <a href="https://www.facebook.com/uba.psi/" target="_blank"><img src="img/facebook.png" alt=""></a>
                 <a href="" target="_blank"><img src="img/youtube.png" alt=""></a>
-
+                
             </div>
             <p>Creado con &#x2764 by SUAMVI dev</p>
         </div>
-
+        
     </footer>
+    <!-- footer fin -->
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="js/filtro.js"></script>

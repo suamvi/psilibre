@@ -204,22 +204,6 @@ nav .enlaces a:hover{
   transition: 0.6s;
 }
 
-.logo img{ 
-  height:80px;
-  animation: animacionlogo 2s ease-in-out infinite;
-  animation-timeline: initial;
-}
-
-@keyframes animacionlogo {
-  from {
-    transform: translateX(-80px);
-  }
-  to {
-    transform: translateX(8px);
-  }
-
-}
-
 .icono{
   display:none;
   font-size: 24px;
@@ -390,6 +374,44 @@ nav .enlaces a:hover{
   font-weight: 300;
 }
 
+
+/* boton whtsapp inicio */
+
+.container__boton {
+  flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  border-radius: 50%;
+  bottom: 50px;
+  right: 5px;
+  padding: 5px;
+  transition: ease 1s;
+  animation: efecto 2s infinite;
+}
+
+@keyframes efecto {
+  0%{
+      box-shadow: 0 0 0 .5rem rgb(63, 242, 43);
+  }
+  100%{
+      box-shadow: 0 0 0 2rem rgba(0, 0, 0, 0);
+  }
+}
+
+.container__boton:hover{
+  transform: scale(1.2);
+  transition: .5s;
+}
+
+.container__boton .botonwp{
+  text-align: center;
+  align-items: flex;
+  flex-direction: column;
+}
+
+/* boton whatsapp fin */
+
+
 /* Footer */
 
 footer{
@@ -425,6 +447,14 @@ footer{
   width: 3rem;
   height: 3rem;
   cursor: pointer;
+  position: relative;
+  transition: ease 1s;
+
+}
+
+.iconos img:hover{
+  transform: scale(1.3);
+  transition: .5s;
 }
 
 .fab{
