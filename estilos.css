@@ -204,7 +204,21 @@ nav .enlaces a:hover{
   transition: 0.6s;
 }
 
-.logo, .logo img{ height:80px;}
+.logo img{ 
+  height:80px;
+  animation: animacionlogo 2s ease-in-out infinite;
+  animation-timeline: initial;
+}
+
+@keyframes animacionlogo {
+  from {
+    transform: translateX(-80px);
+  }
+  to {
+    transform: translateX(8px);
+  }
+
+}
 
 .icono{
   display:none;
