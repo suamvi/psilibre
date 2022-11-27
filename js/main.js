@@ -1,31 +1,67 @@
-let ubicacionPrincipal = window.pageYOffset; //0
+// Variables
 
-AOS.init();
+let nav = document.getElementById('nav');
+let menu = document.getElementById('enlaces');
+let abrir = document.getElementById('open');
+let botones = document.getElementsByClassName('btn-header');
+let cerrado = true;
 
-window.addEventListener("scroll", function(){
-    let desplazamientoActual = window.pageYOffset; //180
-    if(ubicacionPrincipal >= desplazamientoActual){ // 200 > 180
-        document.getElementsByTagName("nav")[0].style.top = "0px"
+function menus(){
+    let Desplazamiento_Actual = window.pageYOffset;
+
+    if(Desplazamiento_Actual <= 300){
+        nav.classList.remove('nav2');
+        nav.className = ('nav1');
+        nav.style.transition = '1s';
+        menu.style.top = '80px';
+        abrir.style.color = '#fff';
     }else{
-        document.getElementsByTagName("nav")[0].style.top = "-100px"
+        nav.classList.remove('nav1');
+        nav.className = ('nav2');
+        nav.style.transition = '1s';
+        menu.style.top = '100px';
+        abrir.style.color = '#000';
     }
-    ubicacionPrincipal= desplazamientoActual; //200
+}
 
-})
-
-// Menu
-
-let enlacesHeader = document.querySelectorAll(".enlaces-header")[0];
-let semaforo = true;
-
-document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
-    if(semaforo){
-        document.querySelectorAll(".hamburguer")[0].style.color ="#fff";
-        semaforo= false;
+function apertura(){
+    if(cerrado){
+        menu.style.width = '70vw';
+        cerrado = false;
     }else{
-        document.querySelectorAll(".hamburguer")[0].style.color ="#000";
-        semaforo= true;
+        menu.style.width = '0%';
+        menu.style.overflow = 'hidden';
+        cerrado = true;
     }
+}
 
-    enlacesHeader.classList.toggle("menudos")
-})
+window.addEventListener('load', function(){
+    $('#onload').fadeOut();
+    $('body').removeClass('hidden');
+    menus();
+});
+window.addEventListener('click',function(e){
+    console.log(e.target);
+    if(cerrado==false){
+        let span = document.querySelector('span');
+        if(e.target !== span && e.target !== abrir){
+            menu.style.width = '0%';
+            menu.style.overflow = 'hidden';
+            cerrado = true;
+        }
+    }
+});
+window.addEventListener('scroll', function(){
+    console.log(window.pageYOffset);
+    menus();
+});
+window.addEventListener('resize', function(){
+    if(screen.width>= 700){
+        cerrado = true;
+        menu.style.removeProperty('overflow');
+        menu.style.removeProperty('width');
+    }
+});
+abrir.addEventListener('click', function(){
+    apertura();
+});

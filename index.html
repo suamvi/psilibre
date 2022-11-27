@@ -1,220 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Odontologia Integral</title>
-    <link rel="shortcut icon" href="/img/logo-jordan-alexander3.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Psilibre</title>
+    <link rel="shortcut icon" href="img/mariposaverde.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
 </head>
 
-<body>
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-heart"><div></div></div>
+        <!-- <div class="lds-facebook"><div></div><div></div><div></div></div> -->
+    </div>
     <header>
-        <!-- inicio nav -->
-        <nav>
-            <section class="contenedor nav">
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
                 <div class="logo">
-                    <img src="img/logo-jordan-alexander.png" alt="">
+                    <img src="img/mariposaverde.png" alt="">
                 </div>
-                <div class="enlaces-header">
-                    <a href="#">Inicio</a>
-                    <a href="#tratamientos">tratamientos</a>
-                    <a href="#quienessomos">quienes somos</a>
-                    <a href="#porqueelegirnos">Porque elegirnos</a>
-                    <a href="contacto.html">contacto</a>
+                <div class="enlaces" id="enlaces">
+                    <a href="#" id="enlace-inicio" class="btn-header">Inicio</a>
+                    <a href="#" id="enlace-equipo" class="btn-header">Equipo</a>
+                    <a href="#" id="enlace-servicio" class="btn-header">Servicios</a>
+                    <a href="#" id="enlace-trabajo" class="btn-header">Trabajos</a>
+                    <a href="#" id="enlace-contacto" class="btn-header">Contacto</a>
                 </div>
-                <div class="hamburguer">
-                    <i class="fas fa-bars"></i>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
                 </div>
-            </section>
+            </div>
         </nav>
-        <!-- fin nav -->
-        <!-- inicio principal -->
-        <div class="contenedor">
-            <section class="contenido-header">
-                <section class="textos-header">
-                    <h1>Clínica Odontológica <br>
-                        Dr. Otamendi <br>
-                    </h1>
-                        <h2>Creadores de sonrisas</h2>
-                    <p>Abiertos todos los días de Lunes a Sabados de 8 a 20hs.</p>
-                    <a href="#">mas info</a>
-                </section>
-            </section>
+        <div class="textos">
+            <h1>Psilibre</h1>
+            <h2>Libera tu mente</h2>
+            <h3>Lic. Patry Moises</h3>
         </div>
-        <!-- fin principar -->
     </header>
-    <!-- inicio segundo tratamientos-->
-    <section class="about-us" id="tratamientos">
-        <div class="contenedor1">
-            <h2 class="titulo">Nuestros Tratamientos</h2>
-            <div class="contenedor-articulo">
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="icotarjetas"><img src="/img/ortodoncia2.png" alt=""></i>
-                    <h3>Ortodoncia</h3>
-                        <p>Mejora el alineamiento y la mordida de tus dientes. <br><br>
-                        Brackets Zafiro <br>
-                        Brackets Cerámicos <br>
-                        Brackets Metálicos <br>
-                        Alineadores Invisibles</p>
+    <main>
+        <section class="team contenedor" id="equipo">
+            <h3>Nuestro equipo</h3>
+            <p class="after">Conoce a la gente asombrosa y creativa</p>
+            <div class="card">
+                <div class="content-card">
+                    <div class="people">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="texto-team">
+                        <h4>K</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
                 </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="icotarjetas"><img src="/img/blanqueamiento-dental.png" alt=""></i>
-                    <h3>Blanqueamiento</h3>
-                    <p>Se considera un procedimiento estético que busca reducir por lo menos dos tonalidades el color de las piezas dentarias. <br>
-                        <br> 2 a 4 tonos mas bajos
-                        <br> Elimina manchas
-                        <br> 1 hora de duración
-                    </p>
+                <div class="content-card">
+                    <div class="people">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="texto-team">
+                        <h4>C</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
                 </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="icotarjetas"><img src="/img/urgencia.png" alt=""></i>
-                    <h3>Urgencia</h3>
-                    <p>Un odontólogo de nuestro equipo está disponible para brindarte la mejor solución ante cualquier trauma causado por lesiones en la boca, dientes o encías</p>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="icotarjetas"><img src="/img/odontologia.png" alt=""></i>
-                    <h3>Odontologia General</h3>
-                    <p>Realizamos todos los tratamientos. <br>
-                        <br> Implantes Dentales
-                        <br> Coronas de porcelana
-                        <br> Cirugía y extracciones
-                        <br> Limpieza dental y más</p>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="icotarjetas"><img src="/img/endodoncia.png" alt=""></i>
-                    <h3>Endodoncia</h3>
-                    <p>Es el tratamiento por el cual se extirpa la pulpa o nervio de los conductos radiculares a fin de salvar la pieza dentaria de una posible extracción por motivos traumáticos, caries o infección.</p>
-                </div>
-                <div class="articulo" data-aos="zoom-in-right">
-                    <i class="icotarjetas"><img src="/img/implante-dental.png" alt=""></i>
-                    <h3>Implantes</h3>
-                    <p>Pieza artificial de titanio que se inserta en el hueso del maxilar para sustituir una raíz dentaria perdida. Se considera la base o el anclaje para colocar una prótesis o una corona.</p>
+                <div class="content-card">
+                    <div class="people">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="texto-team">
+                        <h4>M</h4>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- fin segundo -->
-    <!-- inicio tercero -->
-    <section class="questions contenedor" id="quienessomos">
-        <section class="textos-questions">
-            <h1>Quienes somos</h1> <br>
-            <h3>Somos un grupo de profesionales de la salud especializados en diferentes campos que se propuso como objetivo brindar un servicio integral de odontología individualizada a cada paciente. <br>
-            Para que puedas contar con una buena salud dental y una linda sonrisa de manera accesible.</h3>
-            <!-- <a href="#">Learn more</a> -->
         </section>
-        
-        <img src="img/dentist2.jpg" alt="" data-aos="zoom-out-up" data-aos-duration="2500">
-    </section>
-    <!-- fin tercero -->
-    <!-- inicio cuarto -->
-    <section class="results">
-        <div class="contenedor1 conten-results" id="porqueelegirnos">
-            <section class="numbers">
-                <div class="number" data-aos="zoom-in-left">
-                    <h4>Obras Sociales</h4>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id.</p> -->
+        <section class="about" id="servicio">
+            <div class="contenedor">
+                <h3>Nuestros servicios</h3>
+                <p class="after">Siempre mejorando para ti</p>
+                <div class="servicios">
+                    <div class="caja-servicios">
+                        <img src="img/heart.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="caja-servicios">
+                        <img src="img/responsive.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="caja-servicios">
+                        <img src="img/efectos.png" alt="">
+                        <h4>Creativos y asombrosos</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
                 </div>
-                <div class="number" data-aos="zoom-in-left">
-                    <h4>Prepagas</h4>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id.</p> -->
-                </div>
-                <div class="number" data-aos="zoom-in-left">
-                    <h4>Precios accesibles</h4>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id.</p> -->
-                </div>
-                <div class="number" data-aos="zoom-in-left">
-                    <h4>Atención personal</h4>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, id.</p> -->
-                </div>
-            </section>
-            <section class="results-text">
-                <h4>Porque elegirnos</h4>
-                <p>Nuestra experiencia con mas de x años trabajando en distintos campos, nos avalan para brindarte el mejor servicio profesional.</p>
-                <a href="#">Mas info</a>
-            </section>
-        </div>
-    </section>
-    <!-- fin cuarto -->
-    <!-- inicio quinto -->
-<!-- mapa inicio -->
-    <!-- <section class="contenedor-mapa">
-        <br>
-        <div class="mapa-titulo">
-        <h2>Ubicacion</h2>
-            <h3>
-                Nos encontramos a 200mts. de Obelisco, en pleno centro porteño con multiples medios de transporte para mayor repidez en acceder a nuestros consultorios. 
-            </h3>
-        </div>
-    <div class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.9947088232452!2d-58.385786830435414!3d-34.60469669445969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2ebe3e66ad%3A0x9041534381a23403!2sConsultorio%20odontol%C3%B3gico%20plus%20odontologia%20integral!5e0!3m2!1ses!2sar!4v1669064872177!5m2!1ses!2sar" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    </section> -->
-<!-- mapa inicio -->
-
-
-
-    <section class="contenedor1 services">
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.9947088232452!2d-58.385786830435414!3d-34.60469669445969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb2ebe3e66ad%3A0x9041534381a23403!2sConsultorio%20odontol%C3%B3gico%20plus%20odontologia%20integral!5e0!3m2!1ses!2sar!4v1669064872177!5m2!1ses!2sar" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        <!-- <img src="img/dentist3.jpg" alt=""> -->
-        <div class="box-skills">
-            <h4><i class="far fa-check-circle"></i> Ubicacion</h4>
-            <h4> Nos encontramos a 200mts. de Obelisco, en pleno centro porteño con multiples medios de transporte para mayor repidez en acceder a nuestros consultorios. </h4>
-            <!-- <h4><i class="far fa-check-circle"></i> Atencion personalizada</h4>
-            <h4><i class="far fa-check-circle"></i> Cercania</h4>
-            <h4><i class="far fa-check-circle"></i> Turnos inmediatos</h4>
-            <h4><i class="far fa-check-circle"></i> Rapidez</h4>
-            <h4><i class="far fa-check-circle"></i> Profesionalismo</h4> -->
-        </div>
-    </section>
-    <!-- fin quinto -->
-    <!-- inico boton whatsapp -->
-    
-    <div class="container__boton">                
-        <ul class="menu__boton">
-        <a href="http://wa.me/5491176073009?text=Hola%20te%20contacto%20desde%20la%20web%20y%20quiero%20consultar%20lo%20siguiente:">
-            <img class="botonwp" src="img/whatsapp.svg" alt="">
-        </a>
-        </ul>
-    </div>
-
-    <!-- fin boton whatsapp -->
-    <!-- inicio footer -->
-    <footer>
-        <div class="partFooter">
-            <br><img src="img/logo-jordan-alexander.png" alt="">
-        </div>
-        <div class="partFooter">
-            <h4>Ubicacion</h4>
-            <a href="#">Talcahuano 334</a>
-            <a href="#">C.A.B.A. - Argentina</a>
-            <!-- <a href="#">Services 3</a> -->
-        </div>
-        <div class="partFooter">
-            <h4>Telefono y Horarios</h4>
-            <a href="#">(+54 9) 11 7607 3009</a>
-            <a href="#">Lunes a Viernes de 9 a 20 hs <br>Sabados de 9 a 20hs</a>
-            <!-- <a href="#">About 3</a> -->
-        </div>
-        <div class="partFooter">
-            <h4>Redes sociales</h4>
-            <div class="social-media">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
             </div>
+        </section>
+        <section class="work contenedor" id="trabajo">
+            <h3>Nuestro trabajo</h3>
+            <p class="after">Hacemos de algo simple algo extraordinario</p>
+            <div class="botones-work">
+                <ul>
+                    <li class="filter active" data-nombre='todos'>Todos</li>
+                    <li class="filter" data-nombre='diseño'>Diseño</li>
+                    <li class="filter" data-nombre='programacion'>Programacion</li>
+                    <li class="filter" data-nombre='marketing'>Marketing</li>
+                </ul>
+            </div>
+            <div class="galeria-work">
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Programacion</h4>
+                    </div>
+                </div>
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Programacion</h4>
+                    </div>
+                </div>
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Programacion</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Diseño</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Diseño</h4>
+                    </div>
+                </div>
+                <div class="cont-work diseño">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Diseño</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Marketing</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Marketing</h4>
+                    </div>
+                </div>
+                <div class="cont-work marketing">
+                    <div class="img-work">
+                        <img src="img/mariposasazules.jpg" alt="">
+                    </div>
+                    <div class="textos-work">
+                        <h4>Marketing</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="contacto">
+        <div class="footer contenedor">
+            <div class="marca-logo">
+                <img src="img/mariposa.png" alt="">
+            </div>
+            <div class="iconos">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <p>Creado con &#x2764 by SUAMVI dev</p>
         </div>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://kit.fontawesome.com/c15b744a04.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-</body>
 
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+</body>
 </html>
